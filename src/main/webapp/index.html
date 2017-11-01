@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>POC RH-SSO</title>
+</head>
+<body onload="apresentaRegras()">
+	<img alt="" src="imagens/logo-tecban.jpg" width="300px" height="120px" align="left">
+	<img alt="" src="imagens/redhat-logo.jpg" width="300px" height="120px" align="right">
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<form action="servletBrms" method="post">
+		<fieldset>
+			<legend>Cenário de Regras</legend>
+			<table>
+				<tr>
+					<td>Código de resposta:</td>
+					<td><input type="text" name="codResposta" id="codResposta" /></td>
+				</tr>
+				<tr>
+					<td>Indice Erro:</td>
+					<td><input type="text" name="indErro" id="indErro" /></td>
+				</tr>
+				<tr>
+					<td>IF:</td>
+					<td><input type="text" name="IF" id="IF" /></td>
+					<td>
+				<tr>
+					<td>ID Transação:</td>
+					<td><input type="text" name="idTransacao" id="idTransacao" /></td>
+				</tr>
+				<tr>
+					<td>Código Erro:</td>
+					<td><input type="text" name="codErro" id="codErro" /></td>
+					<td>
+				<tr>
+					<td><input type="submit" value="Executar Regras"
+						name="executaRegras" /></td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>Cenários da planilha</legend>
+			<table>
+				<tr>
+					<td>
+						<select name="cenario" onchange="apresentaRegras()" id="selCenarios">
+							<option>Cenario1</option>
+							<option>Cenario2</option>
+							<option>Cenario3</option>
+							<option>Cenario4</option>
+							<option>Cenario5</option>
+							<option>Cenario6</option>
+							<option>Cenario7</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	
+<script type="text/javascript">
+function apresentaRegras()
+{
+	if (document.getElementById("selCenarios").value == "Cenario1")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("codResposta").value = "54";
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("indErro").value = "29";
+		document.getElementById("IF").disabled = false;
+		document.getElementById("IF").value = "HSBC";
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("idTransacao").value = "3";
+		document.getElementById("codErro").disabled = false;
+		document.getElementById("codErro").value = "33";
+	}
+	if (document.getElementById("selCenarios").value == "Cenario2")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("codResposta").value = "N2";
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("indErro").value = "426";
+		document.getElementById("IF").disabled = false;
+		document.getElementById("IF").value = "HSBC";
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("idTransacao").value = "3";
+		document.getElementById("codErro").disabled = false;
+		document.getElementById("codErro").value = "513";
+	}
+	if (document.getElementById("selCenarios").value == "Cenario3")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("codResposta").value = "54";
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("indErro").value = "30";
+		document.getElementById("IF").disabled = false;
+		document.getElementById("IF").value = "Citibank";
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("idTransacao").value = "3";
+		document.getElementById("codErro").disabled = false;
+		document.getElementById("codErro").value = "34";
+	}
+	if (document.getElementById("selCenarios").value == "Cenario4")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("codResposta").value = "N2";
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("indErro").value = "427";
+		document.getElementById("IF").disabled = false;
+		document.getElementById("IF").value = "Citibank";
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("idTransacao").value = "3";
+		document.getElementById("codErro").disabled = false;
+		document.getElementById("codErro").value = "514";
+	}
+	if (document.getElementById("selCenarios").value == "Cenario5")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("codResposta").value = "Erro durante fluxo da transacao";
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("indErro").value = "90";
+		document.getElementById("IF").disabled = false;
+		document.getElementById("IF").value = "HSBC";
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("idTransacao").value = "3";
+		document.getElementById("codErro").disabled = false;
+		document.getElementById("codErro").value = "128";
+	}
+	if (document.getElementById("selCenarios").value == "Cenario6")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("codResposta").value = "Erro durante fluxo da transacao";
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("indErro").value = "90";
+		document.getElementById("IF").disabled = false;
+		document.getElementById("IF").value = "HSBC";
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("idTransacao").value = "4";
+		document.getElementById("codErro").disabled = false;
+		document.getElementById("codErro").value = "129";
+	}
+
+	if (document.getElementById("selCenarios").value == "Cenario7")
+	{
+		document.getElementById("codResposta").disabled = false;
+		document.getElementById("indErro").disabled = false;
+		document.getElementById("IF").disabled = false;
+		document.getElementById("idTransacao").disabled = false;
+		document.getElementById("codErro").disabled = false;
+		}
+}
+</script>
+</body>
+</html>
